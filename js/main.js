@@ -12,7 +12,14 @@ window.onload = function()
             height: 480,
             backgroundColor: 'rgba(191,191,191,1)',
             parent: 'phaser-game',
-            scene: [SceneMain, SceneSignUp, ScenePlay]
+            scene: [SceneMain, SceneSignUp, ScenePlay],
+            physics: {
+                default: 'arcade',
+                arcade: {
+                    gravity: { y: 300 },
+                    debug: false
+                }
+            }
         };
     } else {
         var config = {
@@ -21,7 +28,14 @@ window.onload = function()
             height: window.innerHeight,
             backgroundColor: 'rgba(191,191,191,1)',
             parent: 'phaser-game',
-            scene: [SceneMain, SceneSignUp, ScenePlay]
+            scene: [SceneMain, SceneSignUp, ScenePlay],
+            physics: {
+                default: 'arcade',
+                arcade: {
+                    gravity: { y: 300 },
+                    debug: false
+                }
+            }
         };
     }
     var game = new Phaser.Game(config);
