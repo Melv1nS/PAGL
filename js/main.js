@@ -8,18 +8,20 @@ window.onload = function()
     if (isMobile == -1) {
         var config = {
             type: Phaser.AUTO,
-            width: 480,
-            height: 640,
+            width: 640,
+            height: 480,
+            backgroundColor: 'rgba(191,191,191,1)',
             parent: 'phaser-game',
-            scene: [SceneMain]
+            scene: [SceneMain, SceneSignUp, ScenePlay]
         };
     } else {
         var config = {
             type: Phaser.AUTO,
             width: window.innerWidth,
             height: window.innerHeight,
+            backgroundColor: 'rgba(191,191,191,1)',
             parent: 'phaser-game',
-            scene: [SceneMain]
+            scene: [SceneMain, SceneSignUp, ScenePlay]
         };
     }
     var game = new Phaser.Game(config);
