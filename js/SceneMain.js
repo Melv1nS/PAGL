@@ -51,6 +51,5 @@ class SceneMain extends Phaser.Scene {
 
     ButtonPress(scene) {
         this.scene.switch(scene);
-        
     }
 }
